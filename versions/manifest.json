@@ -1,0 +1,114 @@
+{
+  "fabric-1.20.4": {
+    "sha512": "74ee9c6d8925305dae9938c60bfeffa39ea0bee13295faf286801429719ba645216640e86c0bde5cdb9699fcc7aab666ac937a54d6dcdf40acaa519a13fd3c51",
+    "version": "fabric-1.20.4-2.5.22"
+  },
+  "fabric-1.20.6": {
+    "sha512": "b71cc4e630c4b061df671b0c0ebcfefd1e54c47521b502bc2fa716d4b13c2098ec0f3ceb903884a4a9d4639444ecd3337528b8510cad6a7f5151aeb59dd6281b",
+    "version": "fabric-1.20.6-2.5.22"
+  },
+  "fabric-1.21.1": {
+    "sha512": "a708962875ef3beafe4eeeea0d7984c1d810fce23544e1615f51d0f5900e2d65633056bf62b793bc9486ea0ef117d34b18d5cac461870e35677c51c979519eda",
+    "version": "fabric-1.21.1-2.6.24"
+  },
+  "fabric-1.21.11": {
+    "sha512": "ffe87edb4655a287175dbd4286281a4b83e30e47649c40940059e43f75d234ee9539a4e665468f39556761f9959096fa28da57682bca613b7875492404a18467",
+    "version": "fabric-1.21.11-2.6.24"
+  },
+  "fabric-1.21.4": {
+    "sha512": "3bcfdc08c3cdd6f978fbc8f5029d87a7446254251d06bd22c3f27feede040447a06fc092be70dd18d5b3d1f81cd50027d3e524588d03fc8621424175703ffc4d",
+    "version": "fabric-1.21.4-2.6.24"
+  },
+  "fabric-1.21.8": {
+    "sha512": "21724d2caf3879e8c2fecd548c66b850ad2cb995b2bde1b41db840e585439745f51ec894b8312268e1c2a22a4a74018042ab1c5441e82f2db42eaf23324f9b3f",
+    "version": "fabric-1.21.8-2.6.24"
+  },
+  "fabric-26.1": {
+    "sha512": "303aa7d53ae0df65871faa5175457e5b8fe99f0c3f4f263722fe012ee5a556c5efd5732515093a3d05337a238ed920cb979be635e8db38c9306cd6da12b16f58",
+    "version": "fabric-2.6.24+26.1.2"
+  },
+  "fabric-26.2": {
+    "sha512": "592c66fafdf00d9b9b23f23da8dbfd8bb996c2f639b8d55c2028a9fd55d79a7df67f1d23e1ef11a52919baa6b946a65190f805f884f0d50492db10d8bcd83db0",
+    "version": "fabric-2.6.24+26.2"
+  },
+  "fabric-26.3": {
+    "sha512": "414eb51967305fe7740d34016bc8e3e4e2fa1590e1278ad06bcdfa0687f65007b825d345dc09f79a992704a51ec93baf01fe727e0bbc32fdf506828b5a65d85a",
+    "version": "fabric-2.6.24+26.3"
+  },
+  "forge-1.20.4": {
+    "sha512": "f4943ec505580210d313e2b026ec7e001a49396c4e476443f026ef8d9ed3f2748ac0a638fa428ce6bb787ae467ba301e82ff6fdc1b352d2aa05959e48ef18144",
+    "version": "forge-1.20.4-2.5.22"
+  },
+  "forge-1.20.6": {
+    "sha512": "84f5273bf95ac7c9ea918a53cf2e6bca3d65242550c45fdf4fbd326b60f7b57b443a7f06869fe41288f3b0c695d44eef14cdd5a14b0313d8feb46fe60f7119a2",
+    "version": "forge-1.20.6-2.5.22"
+  },
+  "forge-1.21.1": {
+    "sha512": "0eb61b794c1af8915b259034e00b03bfd1ed9145df7d8a79979c9ca36ee0932ccec6f1cb02aa822864fa777ffc0c8b8e2f6b1fd20dd4adb1afc1f6756c971467",
+    "version": "forge-1.21.1-2.6.24"
+  },
+  "forge-1.21.11": {
+    "sha512": "8f19f2b7e61eaa71c3fc69b955eeaaaf0bf2931dafad5a647f668c933463bd3fefdff9d6f4897cdd23f5157116b69d24752d26e37443b3c111806ecaead2528b",
+    "version": "forge-1.21.11-2.6.24"
+  },
+  "forge-1.21.4": {
+    "sha512": "f4dc5a044440ca87cc21245a7bc9513a93e581a15f6ac39f0fd5915d546e7cfcafaf67d6ba122fdbf64e4db59189301a8117d3eb6b6b0b903b0710d835a39821",
+    "version": "forge-1.21.4-2.6.24"
+  },
+  "forge-1.21.8": {
+    "sha512": "3c0a79536e7e65da476b5bc6b577b51d8a888d91e06231bb8043aaf9065eb53d22561d882b54e7f72b214047b9cbd1316acf878dab099f6cf6ece2e20aa7601b",
+    "version": "forge-1.21.8-2.6.24"
+  },
+  "forge-26.1": {
+    "sha512": "1e4df639cd1d848136f1f428dd8edc00286af780edba13ea5dd9f1a92502db368a2c3251e49123cc9317336883e8425d6263aa57a470f8ee4baedc4c2e9e70d5",
+    "version": "forge-2.6.24+26.1.2"
+  },
+  "forge-26.2": {
+    "sha512": "cd458e704d45b9460558071d7865758e9d45910c70fc2ed1c0c0275c8d755851e1cf3cb4c485d69e3ad57152aa0241568ea6a0242b9ed8dbab26dc2d433a1644",
+    "version": "forge-2.6.24+26.2"
+  },
+  "forge-26.3": {
+    "sha512": "5a504bc90cfa3d45007aa3a110b379fa022d619b12c8878be401ff4c55d85dc1a5108a7bed31572c9d4b55269ddaba58bc9f74da498089d27b102f527e253b2f",
+    "version": "forge-2.6.24+26.3"
+  },
+  "neoforge-1.20.4": {
+    "sha512": "43f35818d40a06af285f3e3066ca3f9a875e59777a9cd9f767e048a8e02a6398e67a82f33c91cd06941b4c4829733f39fd72ab835e5a6c5a46c884376d0fe401",
+    "version": "neoforge-1.20.4-2.5.22"
+  },
+  "neoforge-1.20.6": {
+    "sha512": "a5dead4f2d649e39c0eeed5778be344cbf8aa0feca62c90b90d7c1d26442940afc9479dd6d1d11213c6cb33b8bf1709eb6f21ddf0b09ac8b1bf821255ddfec5e",
+    "version": "neoforge-1.20.6-2.5.22"
+  },
+  "neoforge-1.21.1": {
+    "sha512": "730d2b2acc39afbac16cd3e4312d411e6f226f71aa58e26ff9c772110f962b2e2c7810baa3cd19cd82d28aed85c58d0c0df1ed5fc97dad8a89655008f3461a31",
+    "version": "neoforge-1.21.1-2.6.24"
+  },
+  "neoforge-1.21.11": {
+    "sha512": "795bfab8470e6d85c0967e872b4b79e62c4730f0a7fca6590ccd3a6c4cde6fede10aa39719fc947b39d6ae5240362070342bbafedff9ff40768cf6cdaefc9302",
+    "version": "neoforge-1.21.11-2.6.24"
+  },
+  "neoforge-1.21.4": {
+    "sha512": "2daea93561269f7f171665e3d9de6251d2ee448dd7c6d72339ea1a6ddb493081d928afc2f5566be7ea54d1822acf620245410d3ca3eefac848835e3a5cd95d5b",
+    "version": "neoforge-1.21.4-2.6.24"
+  },
+  "neoforge-1.21.8": {
+    "sha512": "73648217cb3b0d989ef586c921d6a21a67acdbd2e20d651806ead96da10e51657ab104f011fc4185416560da021d5a654ce9749e871172927ddccd3c508703a1",
+    "version": "neoforge-1.21.8-2.6.24"
+  },
+  "neoforge-26.1": {
+    "sha512": "363dedec66467379bbea005f0bd7fc8be4f2eab3bf87a97a77f2028ac6e59e4c503a2101e924763d9e55ad51ec965dc41dd1851a2adb28545c65769a5ab65700",
+    "version": "neoforge-2.6.24+26.1.2"
+  },
+  "neoforge-26.2": {
+    "sha512": "bec6e6141e8819562b1d41fa0c9ea02ab87d7c8de74533d4a9202ba19d989ddba71ba9c355c3067c827a3b04566a88bf69b749367fd8b3c5f6c543c6d0b1e646",
+    "version": "neoforge-2.6.24+26.2"
+  },
+  "neoforge-26.3": {
+    "sha512": "b95d1e158c6fff2cbd71f16c3dc1fd8412cfa10edaa597dc878aa1bd02c695cf2a95c9807145fe486a5c82845b3fc32088242021f78df5b7394b599a8a564527",
+    "version": "neoforge-2.6.24+26.3"
+  },
+  "plugin": {
+    "sha512": "7f1d5765e79cd42616f14f40322d1171a8505e1116dfff71c7bd0e59af9d255c06f70a68a5b622015c0407d40c80e70298c172992007ff339cedcef0116fec42",
+    "version": "bukkit-2.6.24"
+  }
+}
