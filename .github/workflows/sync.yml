@@ -17,14 +17,17 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            branch="sync/$(date +%Y-%m-%d)"
+            branch="sync/$(date +%Y-%m-%d-%H%M)"
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git checkout -b "$branch"
             git add -A
             git commit -m "chore: sync Simple Voice Chat jars from Modrinth"
             git push -u origin "$branch"
+            # Needs Settings > Actions > "Allow GitHub Actions to create and approve pull requests".
+            # If that is off, the branch above is still pushed; open the PR by hand.
             gh pr create --base main --head "$branch" \
               --title "chore: sync Simple Voice Chat jars from Modrinth" \
-              --body "Automated sync. See versions/manifest.json for what changed."
+              --body "Automated sync. See versions/manifest.json for what changed." \
+              || echo "::warning::Branch $branch pushed but the PR could not be created. Enable Actions PR creation in repo settings, or open it manually."
           fi

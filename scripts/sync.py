@@ -3,9 +3,11 @@
 
 Stable raw.githubusercontent.com URLs for the panel Template Installer
 (voicechat-<loader>-<mc>.jar). Stdlib only: python3 scripts/sync.py
-Every download is checked against Modrinth's sha512 before it is written.
+Every download is checked against Modrinth's sha512 and for the loader's metadata
+file before it is written. Release and beta builds are mirrored (Modrinth marks
+most mod builds beta); alpha and snapshot builds are skipped.
 """
-import hashlib, json, sys, urllib.parse, urllib.request
+import hashlib, io, json, sys, urllib.parse, urllib.request, zipfile
 from pathlib import Path
 
 API = "https://api.modrinth.com/v2/project/simple-voice-chat/version"
@@ -13,7 +15,8 @@ UA = {"User-Agent": "OmneHosting/simple-voice-chat-mirror (https://github.com/Om
 OUT = Path(__file__).resolve().parent.parent / "versions"
 
 # Mod loaders: one jar per Minecraft version. Keys are what the template offers.
-# NeoForge has no 1.20.1 build, so 1.20.1 is deliberately not mirrored.
+# 1.20.1 is deliberately not offered: NeoForge has no 1.20.1 build, and the
+# template shares one version list across all three loaders.
 MC = ["26.3", "26.2", "26.1", "1.21.11", "1.21.8", "1.21.4", "1.21.1", "1.20.6", "1.20.4"]
 LOADERS = ["fabric", "forge", "neoforge"]
 
@@ -39,10 +42,19 @@ def latest(loader, mc=None):
     raise SystemExit(f"no release/beta build for {loader} {mc or ''}")
 
 
-def fetch(f):
+# The file that proves a jar is for the loader we think it is.
+# (NeoForge used mods.toml until 1.20.5, then neoforge.mods.toml.)
+MARKER = {"bukkit": ("plugin.yml",), "fabric": ("fabric.mod.json",),
+          "forge": ("META-INF/mods.toml",),
+          "neoforge": ("META-INF/neoforge.mods.toml", "META-INF/mods.toml")}
+
+
+def fetch(f, loader):
     data = get(f["url"])
     if hashlib.sha512(data).hexdigest() != f["hashes"]["sha512"]:
         raise SystemExit(f"sha512 mismatch for {f['filename']}")
+    if not set(MARKER[loader]) & set(zipfile.ZipFile(io.BytesIO(data)).namelist()):
+        raise SystemExit(f"{f['filename']} has none of {MARKER[loader]}, wrong loader?")
     return data
 
 
@@ -58,7 +70,7 @@ def main():
     manifest, changed = {}, []
 
     ver, f = latest("bukkit")
-    data = fetch(f)
+    data = fetch(f, "bukkit")
     manifest["plugin"] = {"version": ver, "sha512": f["hashes"]["sha512"]}
     for name in PLUGINS:
         for line in PLUGIN_LINES:
@@ -69,7 +81,7 @@ def main():
         for mc in MC:
             ver, f = latest(loader, mc)
             dest = OUT / f"voicechat-{loader}-{mc}.jar"
-            if write(dest, fetch(f)):
+            if write(dest, fetch(f, loader)):
                 changed.append(dest.name)
             manifest[f"{loader}-{mc}"] = {"version": ver, "sha512": f["hashes"]["sha512"]}
 
